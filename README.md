@@ -62,16 +62,3 @@ PRODUCT.md owns the confirmed scope. Other documents elaborate it; proposed deta
 | Input | Mouse, keyboard, and touch |
 | Persistence | Current page session only; refresh restores the starting experience |
 | Sharing | App URL opens the curated starting experience |
-
-## Open decisions
-
-| Decision | Recommendation or current position | When needed |
-| --- | --- | --- |
-| Product name | “Pretext playground” is the working identifier | Before final copy and metadata |
-| Public URL and repository connection | Created when the user deploys to Vercel | Before deployment |
-| Text validation details | Limit and fallback approved; counting semantics and fallback detection need technical validation | During editor/layout implementation |
-| Real-device verification | Firefox/Safari and real touch behavior unverified | Before making compatibility claims |
-
-## Verification snapshot
-
-Checked in a headless Chromium at 1440×900 and a mobile emulation: initial layout, drag over the full essay (mouse), arrow-key and pad movement, size slider, edit/apply/cancel with over-limit guard, empty text, reset, layout view, language toggle (English/Mandarin, CJK wrapping and measurement agreement), and a production build. Not yet checked: real touch devices, Firefox/Safari, screen readers, and 200% zoom. See [docs/acceptance.md](docs/acceptance.md) for the full record.
