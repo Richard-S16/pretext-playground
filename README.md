@@ -1,3 +1,6 @@
+https://github.com/user-attachments/assets/fadf9e49-5b34-4732-8b35-20813611d12e
+
+
 # Pretext playground
 
 An artful, interactive demonstration of [Pretext](https://github.com/chenglou/pretext): move the circle, and the essay flows around it.
