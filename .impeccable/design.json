@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-28T16:19:39.937Z",
+  "title": "Design System: Pretext playground",
+  "extensions": {
+    "colorMeta": {
+      "violet-accent": {
+        "role": "primary",
+        "displayName": "Specimen Violet",
+        "canonical": "#5639d9",
+        "tonalRamp": [
+          "#160c40",
+          "#271674",
+          "#3820a7",
+          "#4c2dd7",
+          "#7861e1",
+          "#a494ea",
+          "#d0c7f4",
+          "#edeafb"
+        ]
+      },
+      "table-surface": {
+        "role": "neutral",
+        "displayName": "Table Surface",
+        "canonical": "#f4f5f7",
+        "tonalRamp": [
+          "#20242c",
+          "#3a4150",
+          "#545e73",
+          "#6e7b96",
+          "#929cb0",
+          "#b5bcc9",
+          "#d9dce3",
+          "#f0f2f4"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#262626",
+          "#454545",
+          "#636363",
+          "#828282",
+          "#a1a1a1",
+          "#bfbfbf",
+          "#dedede",
+          "#f2f2f2"
+        ]
+      },
+      "table-ink": {
+        "role": "neutral",
+        "displayName": "Table Ink",
+        "canonical": "#202128",
+        "tonalRamp": [
+          "#22232b",
+          "#3d3f4d",
+          "#585b6f",
+          "#747890",
+          "#9699ab",
+          "#b8bac6",
+          "#dadbe2",
+          "#f1f1f4"
+        ]
+      },
+      "ink-secondary": {
+        "role": "neutral",
+        "displayName": "Secondary Ink",
+        "canonical": "#565b66",
+        "tonalRamp": [
+          "#23252a",
+          "#3f434b",
+          "#5b606c",
+          "#777e8d",
+          "#999ea9",
+          "#babdc5",
+          "#dbdde1",
+          "#f1f2f3"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#d9dce3",
+        "tonalRamp": [
+          "#20242c",
+          "#3a414f",
+          "#545d73",
+          "#6f7a95",
+          "#929baf",
+          "#b6bbc9",
+          "#d9dce3",
+          "#f0f1f4"
+        ]
+      },
+      "clay-error": {
+        "role": "tertiary",
+        "displayName": "Clay Error",
+        "canonical": "#b3261e",
+        "tonalRamp": [
+          "#420e0b",
+          "#761914",
+          "#aa241d",
+          "#db3329",
+          "#e4655d",
+          "#ed9792",
+          "#f5c9c6",
+          "#fbeae9"
+        ]
+      },
+      "ink-primary-deep": {
+        "role": "neutral",
+        "displayName": "Deep Ink",
+        "canonical": "#33353f",
+        "tonalRamp": [
+          "#22242a",
+          "#3e404c",
+          "#595c6e",
+          "#75798f",
+          "#979aab",
+          "#b9bbc6",
+          "#dadce1",
+          "#f1f1f4"
+        ]
+      },
+      "control-border": {
+        "role": "neutral",
+        "displayName": "Control Border",
+        "canonical": "#868b9b",
+        "tonalRamp": [
+          "#23242a",
+          "#3e414b",
+          "#5a5e6d",
+          "#767c8e",
+          "#989caa",
+          "#b9bcc5",
+          "#dbdce1",
+          "#f1f2f3"
+        ]
+      },
+      "control-border-hover": {
+        "role": "neutral",
+        "displayName": "Control Border Hover",
+        "canonical": "#666b78",
+        "tonalRamp": [
+          "#232529",
+          "#3f424a",
+          "#5b606c",
+          "#787e8c",
+          "#999da8",
+          "#babdc4",
+          "#dbdde1",
+          "#f1f2f3"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "body": {
+        "displayName": "Essay Body",
+        "purpose": "The flowing essay at desktop scale; sizes track the CSS breakpoints and Pretext measurement exactly."
+      },
+      "body-compact": {
+        "displayName": "Essay Body, Compact",
+        "purpose": "The flowing essay under 900px."
+      },
+      "instruction": {
+        "displayName": "Instruction",
+        "purpose": "The single loud line, first viewport only."
+      },
+      "instruction-compact": {
+        "displayName": "Instruction, Compact",
+        "purpose": "The instruction under 640px."
+      },
+      "empty-state": {
+        "displayName": "Empty State",
+        "purpose": "The prompt shown when the visitor empties the text."
+      },
+      "explanation": {
+        "displayName": "Explanation",
+        "purpose": "Layout-view prose and its heading."
+      },
+      "control": {
+        "displayName": "Control Text",
+        "purpose": "Button and textarea text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Control labels, counter, pad group label."
+      },
+      "hint": {
+        "displayName": "Hint",
+        "purpose": "One-line help under controls and the reset scope note."
+      },
+      "counter": {
+        "displayName": "Counter",
+        "purpose": "Character count under the textarea."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out-system",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "All UI state transitions and entrances."
+      },
+      {
+        "name": "duration-press",
+        "value": "140ms",
+        "purpose": "Button press feedback (scale 0.97)."
+      },
+      {
+        "name": "duration-disc",
+        "value": "150ms",
+        "purpose": "Disc hover/drag scale only; placement never transitions."
+      },
+      {
+        "name": "duration-panel",
+        "value": "180ms",
+        "purpose": "Editor and layout-panel entrances."
+      },
+      {
+        "name": "duration-canvas",
+        "value": "240ms",
+        "purpose": "Canvas fade-in on first ready."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "rail",
+        "value": "900px"
+      },
+      {
+        "name": "header",
+        "value": "640px"
+      }
+    ],
+    "invariants": [
+      "Reflow is direct manipulation: never animate text movement or stagger fragments.",
+      "Exclusion radius = disc radius + 12px gap; glyphs never enter the gap.",
+      "Hover effects only under (hover: hover) and (pointer: fine).",
+      "prefers-reduced-motion removes transforms and keeps plain fades.",
+      "Controls keep ≥3:1 boundaries on the surface (Two-Border Rule); hairlines are decoration only.",
+      "Under pointer: coarse every control is a ≥44px touch target."
+    ]
+  },
+  "components": [
+    {
+      "name": "Button",
+      "kind": "button",
+      "refersTo": "button",
+      "description": "Default control on the tool rail and in the editor. Paper fill, 3:1 control border, 8px corners.",
+      "html": "<button class=\"ds-btn\">Edit text</button>",
+      "css": ".ds-btn { font-family: \"Source Sans 3\", system-ui, -apple-system, \"Segoe UI\", sans-serif; font-size: 15px; font-weight: 500; color: #202128; background: #ffffff; border: 1px solid #868b9b; border-radius: 8px; padding: 8px 14px; cursor: pointer; transition: transform 140ms cubic-bezier(0.23, 1, 0.32, 1), border-color 140ms ease; } .ds-btn:hover { border-color: #666b78; } .ds-btn:active { transform: scale(0.97); } .ds-btn:focus-visible { outline: 2px solid #5639d9; outline-offset: 2px; }"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Affirming action inside the editor (Apply text). Ink fill, paper text.",
+      "html": "<button class=\"ds-btn-primary\">Apply text</button>",
+      "css": ".ds-btn-primary { font-family: \"Source Sans 3\", system-ui, -apple-system, \"Segoe UI\", sans-serif; font-size: 15px; font-weight: 500; color: #ffffff; background: #202128; border: 1px solid #202128; border-radius: 8px; padding: 8px 14px; cursor: pointer; transition: transform 140ms cubic-bezier(0.23, 1, 0.32, 1), background-color 140ms ease; } .ds-btn-primary:hover { background: #33353f; border-color: #33353f; } .ds-btn-primary:active { transform: scale(0.97); } .ds-btn-primary:focus-visible { outline: 2px solid #5639d9; outline-offset: 2px; }"
+    },
+    {
+      "name": "Toggle Button (pressed)",
+      "kind": "button",
+      "refersTo": "button-pressed",
+      "description": "The layout-view toggle keeps the button shape and turns violet when pressed.",
+      "html": "<button class=\"ds-btn-toggle\" aria-pressed=\"true\">Show the layout</button>",
+      "css": ".ds-btn-toggle { font-family: \"Source Sans 3\", system-ui, -apple-system, \"Segoe UI\", sans-serif; font-size: 15px; font-weight: 500; color: #5639d9; background: #ffffff; border: 1px solid #5639d9; border-radius: 8px; padding: 8px 14px; cursor: pointer; } .ds-btn-toggle:focus-visible { outline: 2px solid #5639d9; outline-offset: 2px; }"
+    },
+    {
+      "name": "Obstacle Disc",
+      "kind": "custom",
+      "refersTo": "obstacle-disc",
+      "description": "The movable circle: the single solid violet object, pointer-dragged, arrow-key movable.",
+      "html": "<button class=\"ds-disc\" aria-label=\"The circle. Drag it, or use the arrow keys to move it.\"></button>",
+      "css": ".ds-disc { width: 144px; height: 144px; padding: 0; border: 0; border-radius: 50%; background: #5639d9; cursor: grab; touch-action: none; user-select: none; transition: transform 150ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-disc:hover { transform: scale(1.03); } .ds-disc:active { cursor: grabbing; transform: scale(1.05); } .ds-disc:focus-visible { outline: 2px solid #202128; outline-offset: 6px; }"
+    },
+    {
+      "name": "Size Slider",
+      "kind": "input",
+      "refersTo": "button",
+      "description": "Native range input with the violet accent; label in the 13px Label style.",
+      "html": "<label class=\"ds-range\"><span>Circle size</span><input type=\"range\" min=\"24\" max=\"140\" value=\"72\" /></label>",
+      "css": ".ds-range { display: flex; flex-direction: column; gap: 8px; font-family: \"Source Sans 3\", system-ui, -apple-system, \"Segoe UI\", sans-serif; font-size: 13px; font-weight: 600; color: #565b66; } .ds-range input[type=\"range\"] { width: 100%; accent-color: #5639d9; }"
+    },
+    {
+      "name": "Text Area",
+      "kind": "input",
+      "refersTo": "button",
+      "description": "Draft editor for the essay text. Paper fill, control border, violet caret and focus outline.",
+      "html": "<textarea class=\"ds-textarea\" rows=\"4\" spellcheck=\"false\">We tend to think that reading happens where the words are.</textarea>",
+      "css": ".ds-textarea { width: 100%; font-family: \"Source Sans 3\", system-ui, -apple-system, \"Segoe UI\", sans-serif; font-size: 15px; line-height: 1.5; color: #202128; background: #ffffff; border: 1px solid #868b9b; border-radius: 8px; padding: 10px 12px; min-height: 96px; resize: vertical; caret-color: #5639d9; } .ds-textarea:focus-visible { outline: 2px solid #5639d9; outline-offset: 1px; }"
+    },
+    {
+      "name": "Line Fragment (layout view)",
+      "kind": "custom",
+      "refersTo": "obstacle-disc",
+      "description": "One laid-out line as an absolutely positioned span, outlined with the available interval it was given.",
+      "html": "<span class=\"ds-frag\">The circle does not erase anything.</span>",
+      "css": ".ds-frag { display: inline-block; white-space: pre; font-family: \"Source Sans 3\", system-ui, -apple-system, \"Segoe UI\", sans-serif; font-size: 24px; line-height: 35px; color: #202128; outline: 1px dashed rgba(32, 33, 40, 0.3); outline-offset: 1px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Living Specimen",
+    "overview": "The page is a working typesetter’s table, cleared of everything but one broad sheet of text and a single instrument for moving it. Cool near-white ground, charcoal humanist sans-serif at reading scale, one solid violet disc. The text is the exhibit; the tool rail is visibly secondary and never dresses up. The world is flat and optical rather than material: no paper textures, no shadows, no glass, no decorative gradients. Depth comes from tone and hairlines only, and motion is confined to direct manipulation.",
+    "keyCharacteristics": [
+      "One continuous essay rendered as positioned line fragments; the layout itself is the work.",
+      "A single saturated accent reserved for the disc, active states, and focus.",
+      "Flat surfaces; hairlines for divisions; dashed strokes only for explanatory geometry.",
+      "Motion under 300 ms, transform/opacity only, never applied to the reflow itself.",
+      "Responsive by recomposition (type scale and rail arrangement change), never by shrinking."
+    ],
+    "rules": [
+      {
+        "name": "The One Violet Rule",
+        "body": "Specimen Violet appears only on the obstacle, active/selected states, focus indicators, links, and explanatory geometry. It is never used as a background wash or decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two-Border Rule",
+        "body": "Hairlines are decoration; controls carry the darker control border. A control must never be identified by a decorative hairline.",
+        "section": "colors"
+      },
+      {
+        "name": "The Measured-Type Rule",
+        "body": "Flowing text uses whole-pixel font sizes and explicit px line-heights that are identical for CSS and canvas measurement. If the type scale changes, the measurement changes with it.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do keep Specimen Violet to the disc, active states, focus, links, and explanatory strokes.",
+      "Do keep CSS type metrics and Pretext measurement in lockstep; re-prepare when text, font size, or line height changes.",
+      "Do keep pointer-tracked movement instant and put micro-interaction timing at 140–180ms with the system ease.",
+      "Do hide hover effects behind @media (hover: hover) and (pointer: fine).",
+      "Do keep every explanatory stroke 1px dashed so it reads as annotation, not chrome."
+    ],
+    "donts": [
+      "Don’t add shadows, gradients, glass, textures, or card containers; the system is flat by decision.",
+      "Don’t animate the text reflow, stagger fragment entrances, or add autonomous motion; reflow is direct feedback.",
+      "Don’t let the disc’s exclusion zone overlap glyphs — the 12px gap is the invariant that keeps the composition readable.",
+      "Don’t use sub-44px touch targets for the pad on touch layouts.",
+      "Don’t let controls depend on color alone; every state pairs color with a border, outline, or text change."
+    ]
+  }
+}

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pretext playground</title>
+    <meta name="description" content="An interactive experiment: text flows around a shape you can move." />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='11' fill='%235639d9'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <main class="page">
+      <header class="site-header">
+        <h1>Pretext playground</h1>
+        <p class="instruction">Move the circle. See what the words do.</p>
+        <p class="credit">
+          An experiment in text and space, laid out with
+          <a href="https://github.com/chenglou/pretext" rel="noreferrer">Pretext</a>.
+        </p>
+      </header>
+      <div class="workspace">
+        <aside class="rail" aria-label="Controls">
+          <div class="control control-slider">
+            <label class="label" for="size-slider">Circle size</label>
+            <input id="size-slider" type="range" min="24" max="140" step="1" value="72" disabled />
+          </div>
+          <button
+            id="language-toggle"
+            class="btn"
+            type="button"
+            lang="zh-CN"
+            aria-label="Show the essay in Mandarin Chinese"
+            disabled
+          >
+            中文
+          </button>
+          <button id="edit-text" class="btn" type="button" disabled>Edit text</button>
+          <section id="editor" class="editor" hidden aria-label="Edit text">
+            <label class="label" for="editor-text">Your text</label>
+            <textarea id="editor-text" rows="8" spellcheck="false" disabled></textarea>
+            <p class="hint">Plain text only. Your changes last until you refresh this page.</p>
+            <p class="counter" id="counter">0 / 5,000</p>
+            <p class="error" id="error" hidden>Keep your text to 5,000 characters or fewer.</p>
+            <div class="editor-actions">
+              <button id="apply-text" class="btn btn-primary" type="button" disabled>Apply text</button>
+              <button id="cancel-text" class="btn" type="button" disabled>Cancel</button>
+            </div>
+          </section>
+          <div class="control control-pad">
+            <span class="label" id="move-label">Move the circle</span>
+            <div class="pad" role="group" aria-labelledby="move-label">
+              <button class="btn pad-btn pad-up" data-move data-dx="0" data-dy="-1" type="button" aria-label="Move up" disabled>&#8593;</button>
+              <button class="btn pad-btn pad-left" data-move data-dx="-1" data-dy="0" type="button" aria-label="Move left" disabled>&#8592;</button>
+              <button class="btn pad-btn pad-right" data-move data-dx="1" data-dy="0" type="button" aria-label="Move right" disabled>&#8594;</button>
+              <button class="btn pad-btn pad-down" data-move data-dx="0" data-dy="1" type="button" aria-label="Move down" disabled>&#8595;</button>
+            </div>
+            <p class="hint keyboard-hint">Focus the circle and use the arrow keys. Hold Shift for larger steps.</p>
+          </div>
+          <button id="layout-toggle" class="btn" type="button" aria-pressed="false" disabled>Show the layout</button>
+          <div id="explanation" class="explanation" hidden>
+            <h2>How the words find their way</h2>
+            <p>
+              The circle leaves a different amount of space on each line. This app works out those spaces, and
+              Pretext calculates how much text fits into each one. When you move the circle, the text is laid out
+              again from measurements it has already prepared.
+            </p>
+            <p>
+              The outlines show the regions available to the words. The browser still draws the result; Pretext
+              helps calculate the line breaks without measuring every rendered line.
+            </p>
+            <p><a href="https://github.com/chenglou/pretext" rel="noreferrer">Explore Pretext</a></p>
+          </div>
+          <div class="control">
+            <button id="reset-all" class="btn" type="button" disabled>Reset all</button>
+            <p class="hint">Restores the essay, circle, and view.</p>
+          </div>
+        </aside>
+        <div class="field-wrap">
+          <div class="field" id="field">
+            <div class="canvas" id="canvas">
+              <div class="ring" id="ring" aria-hidden="true"></div>
+              <button
+                id="circle"
+                class="circle"
+                type="button"
+                aria-label="The circle. Drag it, or use the arrow keys to move it."
+                disabled
+              >
+                <span class="disc"></span>
+              </button>
+              <p class="empty-state" id="empty-state" hidden>A little space for your words. Choose Edit text to begin.</p>
+            </div>
+            <div class="fallback" id="fallback">
+              <p class="status" id="status">Preparing the text layout&hellip;</p>
+              <p class="plain" id="plain-text">We tend to think that reading happens where the words are. Our eyes travel from one mark to the next, collecting a sentence, looking for its end. But the empty parts of a page are working too. A margin gives a thought somewhere to begin. A pause gives it somewhere to land.
+
+Move something into that space and the sentence takes another route. The words have not changed. Their order is still the same. Yet a line that once felt settled now hesitates, turns a corner, or crosses a small clearing before it continues. You may find yourself reading it differently.
+
+A page is full of quiet agreements. We expect the next word to be nearby. We expect a paragraph to hold together. We trust that what disappears at the edge of one line will return at the start of another. Most of the time, good typography keeps those agreements so gracefully that we never notice them.
+
+Here, the agreement is visible. The circle does not erase anything. It asks the words to make room. Bring it closer to an edge and watch a passage narrow. Move it back and the lines open again. There is no finished arrangement to discover, only another way for the same thought to occupy the page.
+
+Try moving slowly. Notice where a word decides it can no longer fit. Notice the little spaces that appear and disappear around the curve. The page is not a picture of text. It is a set of decisions being made again, in response to your hand.
+
+Then try your own words. A familiar sentence can feel unfamiliar in a different space. Sometimes that is enough to make us pay attention: nothing added to the thought, nothing taken away, just a little more room to see it.
+
+None of this is new. Scribes left margins so commentary could grow beside a sacred sentence. Compositors set type into metal trays and let a woodcut push the words aside. Mapmakers bent names along coastlines. The relationship between text and space is as old as writing itself.
+
+What has changed is who does the arithmetic. A machine can now say, to the pixel, where a line will end — before a single glyph is drawn. That knowledge used to live in the hands and eyes of a trade; today it can be asked for directly, from the same page that is doing the drawing.
+
+This small circle is a demonstration, but it is also a question. If space is part of meaning, who should decide the shape of the space — the author, the reader, or the machinery that guards the line?
+
+You can place the circle wherever it fits. Let it crowd the left margin and watch the rhythm shift. Nudge it a few pixels and a whole sentence reorganizes. There is no wrong arrangement, only the one you happen to want to read right now.
+
+When you are finished, the essay remains exactly as it was. Nothing is added and nothing is lost — only the arrangement remembers your hand for a moment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="sr-only" id="announce" role="status" aria-live="polite"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
